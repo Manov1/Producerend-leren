@@ -82,7 +82,7 @@
                             Vracht
                         </a>
 
-                        <a href="#"
+                        <a href="bestellingen.php"
                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
                             <!-- Heroicon name: outline/folder -->
                             <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6"
@@ -138,7 +138,7 @@
                 <nav class="flex-1 space-y-1 px-2 pb-4">
                     <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
                     <a href="index.php"
-                       class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                       class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                         <!--
                         Heroicon name: outline/home
 
