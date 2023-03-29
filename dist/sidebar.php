@@ -18,7 +18,7 @@
 
     function OpenSideMenu() {
       var sidemenu = document.getElementById("sidebar-menu");
-      sidemenu.classList.remove("opacity-0");
+      sidemenu.classList.remove("opacity-0", "hidden");
       sidemenu.classList.add("opacity-100");
 
       var movemenu = document.getElementById("move-sidebar");
@@ -35,7 +35,7 @@
 </script>
 <div>
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-    <div id="sidebar-menu" class="relative z-40 md:hidden transition-opacity ease-linear duration-300" role="dialog" aria-modal="true">
+    <div id="sidebar-menu" class="relative z-40 hidden transition-opacity ease-linear duration-300" role="dialog" aria-modal="true">
         <!--
         Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
