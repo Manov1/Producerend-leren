@@ -1,6 +1,41 @@
+<script>
+    function CloseSideMenu() {
+      var sidemenu = document.getElementById("sidebar-menu");
+      sidemenu.classList.remove("opacity-100");
+      sidemenu.classList.add("opacity-0");
+
+      var movemenu = document.getElementById("move-sidebar");
+      movemenu.classList.remove("translate-x-0");
+      movemenu.classList.add("-translate-x-full");
+
+      var closebutton = document.getElementById("close-button");
+      closebutton.classList.remove("opacity-100");
+      closebutton.classList.add("opacity-0");
+
+      var sidebarbackground = document.getElementById("sidebar-background");
+      sidebarbackground.classList.add("hidden");
+    }
+
+    function OpenSideMenu() {
+      var sidemenu = document.getElementById("sidebar-menu");
+      sidemenu.classList.remove("opacity-0");
+      sidemenu.classList.add("opacity-100");
+
+      var movemenu = document.getElementById("move-sidebar");
+      movemenu.classList.remove("-translate-x-full");
+      movemenu.classList.add("translate-x-0");
+
+      var closebutton = document.getElementById("close-button");
+      closebutton.classList.remove("opacity-0");
+      closebutton.classList.add("opacity-100");
+
+      var sidebarbackground = document.getElementById("sidebar-background");
+      sidebarbackground.classList.remove("hidden");
+    }
+</script>
 <div>
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-    <div class="relative z-40 md:hidden" role="dialog" aria-modal="true">
+    <div id="sidebar-menu" class="relative z-40 md:hidden transition-opacity ease-linear duration-300" role="dialog" aria-modal="true">
         <!--
         Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
@@ -11,9 +46,9 @@
           From: "opacity-100"
           To: "opacity-0"
       -->
-        <div class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
+        <div id="sidebar-background" class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
 
-        <div class="fixed inset-0 z-40 flex">
+        <div id="move-sidebar" class="fixed inset-0 z-40 flex transition ease-in-out duration-300 transform">
             <!--
             Off-canvas menu, show/hide based on off-canvas menu state.
 
@@ -24,7 +59,7 @@
               From: "translate-x-0"
               To: "-translate-x-full"
           -->
-            <div class="relative flex w-full max-w-xs flex-1 flex-col bg-[#FEF9EF] pt-5 pb-4">
+            <div id="close-button" class="relative flex w-full max-w-xs flex-1 flex-col bg-[#FEF9EF] pt-5 pb-4 ease-in-out duration-300">
                 <!--
                 Close button, show/hide based on off-canvas menu state.
 
@@ -36,7 +71,7 @@
                   To: "opacity-0"
               -->
                 <div class="absolute top-0 right-0 -mr-12 pt-2">
-                    <button type="button"
+                    <button type="button" onclick="CloseSideMenu()"
                             class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                         <span class="sr-only">Close sidebar</span>
                         <!-- Heroicon name: outline/x-mark -->
@@ -206,7 +241,7 @@
     </div>
     <div class="flex flex-1 flex-col md:pl-64">
         <div class="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
-            <button type="button"
+            <button type="button"  onclick="OpenSideMenu()"
                     class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden">
                 <span class="sr-only">Open sidebar</span>
                 <!-- Heroicon name: outline/bars-3-bottom-left -->
