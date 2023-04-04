@@ -1281,12 +1281,12 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-300 {
-  transition-duration: 300ms;
-}
-
 .duration-100 {
   transition-duration: 100ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .ease-in-out {
@@ -1301,8 +1301,9 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.hover\:block:hover {
-  display: block;
+.hover\:bg-\[\#ff9100\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 145 0 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-50:hover {
@@ -1373,14 +1374,6 @@ video {
   --tw-ring-offset-width: 2px;
 }
 
-.group:target .group-target\:block {
-  display: block;
-}
-
-.group:focus-within .group-focus-within\:block {
-  display: block;
-}
-
 .group:focus-within .group-focus-within\:scale-100 {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
@@ -1395,10 +1388,6 @@ video {
   opacity: 1;
 }
 
-.group:hover .group-hover\:block {
-  display: block;
-}
-
 .group:hover .group-hover\:text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1407,14 +1396,6 @@ video {
 .group:hover .group-hover\:text-indigo-400 {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity));
-}
-
-.group:focus .group-focus\:block {
-  display: block;
-}
-
-.group:active .group-active\:block {
-  display: block;
 }
 
 @media (max-width: 890px) {

@@ -33,43 +33,17 @@
       sidebarbackground.classList.remove("hidden");
     }
 </script>
+
 <div>
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
     <div id="sidebar-menu" class="relative z-40 hidden transition-opacity ease-linear duration-300" role="dialog" aria-modal="true">
-        <!--
-        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
-        Entering: "transition-opacity ease-linear duration-300"
-          From: "opacity-0"
-          To: "opacity-100"
-        Leaving: "transition-opacity ease-linear duration-300"
-          From: "opacity-100"
-          To: "opacity-0"
-      -->
         <div id="sidebar-background" class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
 
         <div id="move-sidebar" class="fixed inset-0 z-40 flex transition ease-in-out duration-300 transform">
-            <!--
-            Off-canvas menu, show/hide based on off-canvas menu state.
 
-            Entering: "transition ease-in-out duration-300 transform"
-              From: "-translate-x-full"
-              To: "translate-x-0"
-            Leaving: "transition ease-in-out duration-300 transform"
-              From: "translate-x-0"
-              To: "-translate-x-full"
-          -->
             <div id="close-button" class="relative flex w-full max-w-xs flex-1 flex-col bg-[#FEF9EF] pt-5 pb-4 ease-in-out duration-300">
-                <!--
-                Close button, show/hide based on off-canvas menu state.
 
-                Entering: "ease-in-out duration-300"
-                  From: "opacity-0"
-                  To: "opacity-100"
-                Leaving: "ease-in-out duration-300"
-                  From: "opacity-100"
-                  To: "opacity-0"
-              -->
                 <div class="absolute top-0 right-0 -mr-12 pt-2">
                     <button type="button" onclick="CloseSideMenu()"
                             class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -89,7 +63,7 @@
                     <nav class="space-y-1 px-2">
                         <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
                         <a href="index.php"
-                           class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                           class="index text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
                             <!--
                             Heroicon name: outline/home
 
@@ -106,7 +80,7 @@
                         </a>
 
                         <a href="vracht.php"
-                           class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                           class="vracht text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
                             <!-- Heroicon name: outline/folder -->
                             <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6"
                                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
@@ -118,7 +92,7 @@
                         </a>
 
                         <a href="bestellingen.php"
-                           class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                           class="bestellingen text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
                             <!-- Heroicon name: outline/folder -->
                             <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6"
                                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -142,7 +116,7 @@
                         </a>
 
                         <a href="producten.php"
-                           class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                           class="producten text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
                             <!-- Heroicon name: outline/calendar -->
                             <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6"
                                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -173,7 +147,7 @@
                 <nav class="flex-1 space-y-1 px-2 pb-4">
                     <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
                     <a href="index.php"
-                       class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                       class="index text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                         <!--
                         Heroicon name: outline/home
 
@@ -187,9 +161,8 @@
                         </svg>
                         Dashboard
                     </a>
-
                     <a href="vracht.php"
-                       class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                       class="vracht text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                         <!-- Heroicon name: outline/folder -->
                         <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
@@ -201,7 +174,7 @@
                     </a>
 
                     <a href="bestellingen.php"
-                       class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                       class="bestellingen text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                         <!-- Heroicon name: outline/folder -->
                         <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -225,7 +198,7 @@
                     </a>
 
                     <a href="producten.php"
-                       class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                       class="producten text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                         <!-- Heroicon name: outline/calendar -->
                         <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -257,7 +230,7 @@
                 <div class="ml-4 flex items-center md:ml-6">
                     <a href="login.php">
                         <button type="button"
-                                class="inline-flex items-center rounded-md border border-gray-300 bg-[#FFA733] text-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                class="inline-flex items-center rounded-md border border-gray-300 bg-[#FFA733] text-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-[#ff9100]">
                             Uitloggen
                         </button>
                     </a>
@@ -266,7 +239,7 @@
                     <div class="relative ml-3">
                         <div>
                             <button type="button"
-                                    class="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                    class="flex max-w-xs items-center rounded-full bg-white text-sm"
                                     id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                 <span class="sr-only">Open user menu</span>
                                 <img class="h-8 w-8 rounded-full"
@@ -278,3 +251,14 @@
                 </div>
             </div>
         </div>
+<script>
+        <?php
+            $currentpage = substr(basename($_SERVER['PHP_SELF']), 0, -4);
+        ?>
+        var page = '<?php echo $currentpage;?>';
+        const currentpage = document.getElementsByClassName(page);
+        for (let i = 0; i < currentpage.length; i++) {
+            currentpage[i].classList.add("bg-gray-100","text-gray-900");
+        }
+
+</script>
